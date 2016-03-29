@@ -32,12 +32,11 @@ body {
 #loginpanel {
     position: fixed;
     left: 50%;
-    top: 50%;
-    margin: -150px -180px;
-    width: 500px;
-    height: 400px;
+    top: 60%;
+    margin: -150px -130px;
+    width: 280px;
     background: url(../image/loginpanel2.png) no-repeat;
-    background-size: 70%;
+    background-size: 100%;
     -o-transition: all .2s;
     -moz-transition: all .2s;
     -webkit-transition: all .2s;
@@ -46,13 +45,14 @@ body {
 
 #loginForm {
     position: relative;
-    width: 280px;
-    margin: 25px 40px;
+    width: 260px;
+    margin: 25px 10px;
     text-align: center;
 }
 
 label {
     width: 50px;
+    font-size: 12px;
     display: inline-block;
     text-align: right;
 }
@@ -63,7 +63,7 @@ label.error {
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     border-radius: 0px 0px 5px 5px;
     width: 300px;
-    height: 34px;
+    height: 24px;
     border: 1px solid rgba(255, 255, 255, .15);
     line-height: 31px;
     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset;
@@ -74,10 +74,10 @@ label.error {
 }
 
 input {
-    width: 150px;
-    height: 42px;
-    line-height: 42px;
-    margin-top: 20px;
+    width: 140px;
+    height: 32px;
+    line-height: 32px;
+    margin-top: 15px;
     padding: 0 15px;
     background: #2d2d2d;
     background: rgba(45, 45, 45, .15);
@@ -90,7 +90,7 @@ input {
     -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset;
     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset;
     font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     color: #fff;
     text-shadow: 0 1px 2px rgba(0, 0, 0, .1);
     -o-transition: all .2s;
@@ -109,8 +109,8 @@ input:focus {
 
 button {
     cursor: pointer;
-    width: 230px;
-    height: 44px;
+    width: 150px;
+    height: 34px;
     margin-top: 15px;
     padding: 0;
     background: rgba(6, 127, 228, 0.71);
@@ -120,7 +120,7 @@ button {
     border: 0;
     -moz-box-shadow: 0 15px 30px 0 rgba(255, 255, 255, .25) inset, 0 2px 7px 0 rgba(0, 0, 0, .2);
     font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 300;
     color: #fff;
     text-shadow: 0 3px 2px rgba(0, 0, 0, .1);
