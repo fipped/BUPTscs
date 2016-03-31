@@ -1,204 +1,232 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: "Microsoft Yahei", "Microsoft JhengHei", STHeiti, simSun, Arial;
-    color: #fff;
+
+#login{
+	width: 90%;
+	max-width: 400px;
+	margin:auto;
+}
+.login-form .fieldset {
+  position: relative;
+  margin: 1.4em 0;
+}
+.login-form .fieldset:first-child {
+  margin-top: 0;
+}
+.login-form .fieldset:last-child {
+  margin-bottom: 0;
+}
+.login-form label {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+.login-form label.image-replace {
+  /* replace text with an icon */
+  display: inline-block;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 20px;
+  width: 20px;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  color: transparent;
+  text-shadow: none;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+label.username,label.password {
+display: inline-block;
+position: absolute;
+margin:15px;
+font-size: 18px;
+}
+.login-form input {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  border-radius: 0.25em;
+}
+.login-form input.full-width {
+  width: 100%;
+}
+.login-form input.has-padding {
+  padding: 12px 20px 12px 50px;
+}
+.login-form input.has-border {
+  border: 1px solid #d2d8d8;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+.login-form input.has-border:focus {
+  border-color: #343642;
+  box-shadow: 0 0 5px rgba(52, 54, 66, 0.1);
+  outline: none;
+}
+.login-form input.has-error {
+  border: 1px solid #d76666;
+}
+.login-form input[type=password] {
+  /* space left for the HIDE button */
+  padding-right: 65px;
+}
+.login-form input[type=submit] {
+  padding: 16px 0;
+  cursor: pointer;
+  background: #2f889a;
+  color: #FFF;
+  font-weight: bold;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+.no-touch .login-form input[type=submit]:hover, .no-touch .login-form input[type=submit]:focus {
+  background: #3599ae;
+  outline: none;
+}
+.login-form .hide-password {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 6px 15px;
+  border-left: 1px solid #d2d8d8;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #343642;
+}
+.login-form .error-message {
+  display: inline-block;
+  position: absolute;
+  left: -5px;
+  bottom: -35px;
+  background: rgba(215, 102, 102, 0.9);
+  padding: .8em;
+  z-index: 2;
+  color: #FFF;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  border-radius: 0.25em;
+  /* prevent click and touch events */
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s 0, visibility 0 0.2s;
+  -moz-transition: opacity 0.2s 0, visibility 0 0.2s;
+  transition: opacity 0.2s 0, visibility 0 0.2s;
+}
+.login-form .error-message::after {
+  /* triangle */
+  content: '';
+  position: absolute;
+  left: 22px;
+  bottom: 100%;
+  height: 0;
+  width: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid rgba(215, 102, 102, 0.9);
+}
+.login-form .error-message.is-visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.2s 0, visibility 0 0;
+  -moz-transition: opacity 0.2s 0, visibility 0 0;
+  transition: opacity 0.2s 0, visibility 0 0;
+}
+@media only screen and (min-width: 600px) {
+  .login-form {
+    padding: 2em;
+  }
+  .login-form .fieldset {
+    margin: 2em 0;
+  }
+  .login-form .fieldset:first-child {
+    margin-top: 0;
+  }
+  .login-form .fieldset:last-child {
+    margin-bottom: 0;
+  }
+  .login-form input.has-padding {
+    padding: 16px 20px 16px 50px;
+  }
+  .login-form input[type=submit] {
+    padding: 16px 0;
+  }
 }
 
-#bg {
-    position: fixed;
-    z-index: -2;
-    width: 100%;
-    height: 100%;
+.login-form a:hover{
+	text-decoration: none;
 }
-
-#title {
-    position: fixed;
-    width: 50%;
-    top: 20px;
-    left: 22%;
+.login-form .checkbox{
+	margin:10px 10px;
 }
-
-#timg {
-    position: absolute;
-    width: 80%;
+#forget{
+	float: right;
+  cursor: pointer;
 }
-
-/*登录面板*/
-
-#loginpanel {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    margin: -100px -258px;
-    width: 600px;
-    height: 446px;
-    background: url(../image/loginpanel2.png) no-repeat;
-    background-size: 80%;
-    -o-transition: all .2s;
-    -moz-transition: all .2s;
-    -webkit-transition: all .2s;
-    -ms-transition: all .2s;
+.login-error-message{
+	top: 0;
+	text-align: center;
+	font-family: "Segoe UI",Arial, "Microsoft YaHei", "Droid Sans", "FontAwesome","PT Sans",  sans-serif;
+	font-size: 15px;
+	color:#ff0000;
+	opacity: 0;
 }
-
-#loginForm {
-    position: relative;
-    width: 350px;
-    margin: 60px 70px;
-    text-align: center;
+.login-error-message.is-visible{
+	opacity: 1;
 }
-
-label {
-    width: 60px;
-    display: inline-block;
-    text-align: right;
+.inf{
+  display: inline-block;
+  position: absolute;
+  right: -10px;
+  bottom: -40px;
+  background: rgba(159, 179, 4, 0.9);
+  padding: .8em;
+  z-index: 2;
+  color: #FFF;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  border-radius: 0.25em;
+  /* prevent click and touch events */
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s 0, visibility 0 0.2s;
+  -moz-transition: opacity 0.2s 0, visibility 0 0.2s;
+  transition: opacity 0.2s 0, visibility 0 0.2s;
 }
-
-label.error {
-    display: block;
-    -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    border-radius: 0px 0px 5px 5px;
-    width: 300px;
-    height: 34px;
-    border: 1px solid rgba(255, 255, 255, .15);
-    line-height: 31px;
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, .1);
-    background: rgba(245, 26, 26, 0.81);
-    -moz-border-radius: 6px;
-    margin: 0 auto;
+.inf::after {
+  /* triangle */
+  content: '';
+  position: absolute;
+  left: 22px;
+  bottom: 100%;
+  height: 0;
+  width: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid rgba(159, 179, 4, 0.9);
 }
-
-input {
-    width: 200px;
-    height: 42px;
-    line-height: 42px;
-    margin-top: 25px;
-    padding: 0 15px;
-    background: #2d2d2d;
-    background: rgba(45, 45, 45, .15);
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    border: 1px solid #3d3d3d;
-    border: 1px solid rgba(255, 255, 255, .15);
-    -moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset;
-    -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset;
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset;
-    font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #fff;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, .1);
-    -o-transition: all .2s;
-    -moz-transition: all .2s;
-    -webkit-transition: all .2s;
-    -ms-transition: all .2s
-}
-
-input:focus {
-    background: rgba(45, 45, 45, .3);
-    outline: 0;
-    -moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset, 0 2px 7px 0 rgba(6, 127, 228, .4);
-    -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset, 0 2px 7px 0 rgba(6, 127, 228, .4);
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1) inset, 0 2px 7px 0 rgba(6, 127, 228, .4)
-}
-
-button {
-    cursor: pointer;
-    width: 300px;
-    height: 44px;
-    margin-top: 25px;
-    padding: 0;
-    background: rgba(6, 127, 228, 0.71);
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    border: 0;
-    -moz-box-shadow: 0 15px 30px 0 rgba(255, 255, 255, .25) inset, 0 2px 7px 0 rgba(0, 0, 0, .2);
-    font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-    color: #fff;
-    text-shadow: 0 3px 2px rgba(0, 0, 0, .1);
-    -o-transition: all .2s;
-    -moz-transition: all .2s;
-    -webkit-transition: all .2s;
-    -ms-transition: all .2s
-}
-
-button:hover {
-    -moz-box-shadow: 0 15px 30px 0 rgba(255, 255, 255, .15) inset, 0 2px 7px 0 rgba(0, 0, 0, .2);
-    -webkit-box-shadow: 0 15px 30px 0 rgba(255, 255, 255, .15) inset, 0 2px 7px 0 rgba(0, 0, 0, .2);
-    box-shadow: 0 15px 30px 0 rgba(255, 255, 255, .15) inset, 0 2px 7px 0 rgba(0, 0, 0, .2)
-}
-
-button:active {
-    -moz-box-shadow: 0 15px 30px 0 rgba(255, 255, 255, .15) inset, 0 2px 7px 0 rgba(0, 0, 0, .2);
-    -webkit-box-shadow: 0 15px 30px 0 rgba(255, 255, 255, .15) inset, 0 2px 7px 0 rgba(0, 0, 0, .2);
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, .1) inset, 0 1px 4px 0 rgba(0, 0, 0, .1);
-    border: 0 solid #016FCB
-}
-
-
-/*小院标*/
-
-#Symbol1 {
-    position: fixed;
-    top: 40%;
-    left: 7%;
-    width: 23%;
-    opacity: .3;
-    -webkit-transition: all 0.8s ease;
-    -moz-transition: all 0.8s ease;
-    -o-transition: all 0.8s ease;
-    -ms-transition: all 0.8s ease;
-    transition: all 0.8s ease;
-}
-
-#Symbol1:hover {
-    opacity: 1;
-    -webkit-transition: all 0.8s ease;
-    -moz-transition: all 0.8s ease;
-    -o-transition: all 0.8s ease;
-    -ms-transition: all 0.8s ease;
-    transition: all 0.8s ease;
-}
-
-#Symbol2 {
-    position: fixed;
-    width: 65%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-
-.Symbolimg {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: .0;
-    -webkit-transition: all 1.2s ease;
-    -moz-transition: all 1.2s ease;
-    -o-transition: all 1.2s ease;
-    -ms-transition: all 1.2s ease;
-    transition: all 1.2s ease;
-}
-
-.Symbolimg:hover {
-    opacity: 1;
-    -webkit-transition: all 1.2s ease;
-    -moz-transition: all 1.2s ease;
-    -o-transition: all 1.2s ease;
-    -ms-transition: all 1.2s ease;
-    transition: all 1.2s ease;
-}
-
-footer {
-    position: absolute;
-    text-align: center;
-    margin-bottom: 30px;
-    bottom: 0;
-    width: 100%;
+.inf.is-visible{
+  opacity: 1;
+   visibility: visible;
 }

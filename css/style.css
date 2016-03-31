@@ -1,0 +1,81 @@
+/* -------------------------------- 
+
+基本样式
+
+-------------------------------- */
+
+body {
+    background: #f9f7f3;
+    color: #404d5b;
+    font-weight: 500;
+    font-family: "Segoe UI", Arial, "Microsoft YaHei", "Droid Sans", "FontAwesome", "PT Sans", sans-serif;
+}
+
+input,
+textarea {
+    font-family: "Segoe UI", Arial, "Microsoft YaHei", "Droid Sans", "FontAwesome", "PT Sans", sans-serif;
+    font-size: 16px;
+    font-size: 1rem;
+}
+
+
+/* -------------------------------- 
+
+头部
+
+-------------------------------- */
+
+@media (max-width:900px) {
+    .header .title {
+        font-size: 30px;
+        padding: 40px 0;
+    }
+    .title img {
+        width: 50px;
+    }
+}
+
+.title {
+    padding: 40px 100px 0px;
+    font-size: 100px;
+    font-weight: 100;
+    text-align: center;
+    color: #5e5f63;
+    clear: both;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+.title img {
+    padding-bottom: 30px;
+}
+
+.subtitle {
+    color: #c1c3c4;
+    text-align: center;
+    font-size: 15px;
+}
+/* -------------------------------- 
+
+问卷
+
+-------------------------------- */
+.question {
+    padding-top: 50px;
+}
+/* -------------------------------- 
+
+底部
+
+-------------------------------- */
+footer{
+    bottom: 0;
+	padding-top:50px;
+	padding-bottom: 60px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}

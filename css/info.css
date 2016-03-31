@@ -1,0 +1,33 @@
+body{
+	background: #f9f7f3;
+	color: #404d5b;
+	font-weight: 500;
+	font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", "FontAwesome", sans-serif;
+}
+.header{
+	padding: 40px 200px 50px;
+}
+.header .title{
+	font-size: 100px;
+	font-weight: 100;
+	text-align: center;
+	color:#5e5f63;
+	clear:both;
+}
+.header .title img{
+	padding-bottom: 30px;
+}
+.header .subtitle{
+	color: #c1c3c4;
+	text-align: center;
+	font-size: 15px;
+}
+.byline{
+	text-align: center;
+	color: #bbb;
+	margin-top: 1px;
+	font-size: 12px;
+}
+.question{
+	padding-top:50px; 
+}
