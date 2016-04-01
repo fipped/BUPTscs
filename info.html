@@ -5,24 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>信息采集-北京邮电大学计算机学院</title>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-<!-- FontAwesome -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!--CSS-->
+<link rel="stylesheet" href="css/font-awesome.min.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/bootstrap-vertical-menu.css">
-<link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css"/>                
-<link rel="stylesheet" href="css/info.css" />
+<link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css">
+<link rel="stylesheet" href="css/style.css">
+<!--JS-->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrapValidator.js"></script>
-<script src="js/login.js"></script>
+<script src="js/modernizr.js"></script>
 
 <body>
     <div class="header">
-        <div class="title"><img src="home.png" alt="">BUPTscs</div>
+        <div class="title"><img src="image/home.png" alt="">BUPTscs</div>
         <div class="subtitle">信息采集管理平台</div>
-        <div class="byline">by
-            <a href="" id="author">admin</a>
-        </div>
     </div>
     <nav class="navbar navbar-vertical-left">
         <ul class="nav navbar-nav">
@@ -33,9 +30,9 @@
                 </a>
             </li>
             <li>
-                <a href>
+                <a href="askoff.html">
                     <i class="fa fa-fw fa-lg fa-comments-o"></i>
-                    <span>小论坛</span>
+                    <span>请假销假</span>
                 </a>
             </li>
             <li>
@@ -65,72 +62,131 @@
         </ul>
     </nav>
     <div class="container">
-    <h2>调查问卷-20160331</h2>
-    	<div class="row question">
-    		<div class="col-md-6">
-				<legend>Q1.xxxxx</legend>
-    			
-    			<p>some questions</p>
-    			<form role="form">
-    			<div class="checkbox">
-    				<input type="checkbox" id="checkbox1" class="styled">
-    				<label for="checkbox1">Yes</label>
-    			</div>
-				</form>
-    		</div>
-    		<div class="col-md-6">
-    			some hints
-    		</div>
-    	</div>
-    	<div class="row question">
-    		<div class="col-md-6">
-				<legend>Q2.xxxxx</legend>
-    			
-    			<p>some questions</p>
-    			<form role="form">
-    			<div class="checkbox">
-    				<input type="checkbox" id="checkbox1" class="styled">
-    				<label for="checkbox1">Yes</label>
-    			</div>
-				</form>
-    		</div>
-    		<div class="col-md-6">
-    			some hints
-    		</div>
-    	</div>
-    	<div class="row question">
-    		<div class="col-md-6">
-				<legend>Q3.xxxxx</legend>
-    			
-    			<p>some questions</p>
-    			<form role="form">
-    			<div class="checkbox checkbox-info">
-    				<input type="checkbox" id="checkbox1" class="styled">
-    				<label for="checkbox1">Yes</label>
-    			</div>
-				</form>
-    		</div>
-    		<div class="col-md-6">
-    			some hints
-    		</div>
-    	</div>
-    	<div class="row question">
-    		<div class="col-md-6">
-				<legend>Q4.xxxxx</legend>
-    			
-    			<p>some questions</p>
-    			<form role="form">
-    			<div class="radio radio-info radio-inline">
-    				<input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked>
-    				<label for="inlineRadio1">Yes</label>
-    			</div>
-				</form>
-    		</div>
-    		<div class="col-md-6">
-    			some hints
-    		</div>
-    	</div>
+        <h2>调查问卷-20160331</h2>
+        <div class="row question">
+            <div class="col-md-6">
+                <legend>Q1.你的年级</legend>
+                <form role="form">
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option value="-1">请选择</option>
+                            <option value="2012级本科">2012级本科</option>
+                            <option value="2013级本科">2013级本科</option>
+                            <option value="2014级本科">2014级本科</option>
+                            <option value="2015级本科">2015级本科</option>
+                            <option value="2013级硕士">2013级硕士</option>
+                            <option value="2014级硕士">2014级硕士</option>
+                            <option value="2015级硕士">2015级硕士</option>
+                            <option value="博士">博士</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+            </div>
+        </div>
+        <div class="row question">
+            <div class="col-md-6">
+                <legend>Q2.父亲职业</legend>
+                <form role="form">
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option value="-1">请选择</option>
+                            <option value="医生">医生</option>
+                            <option value="国企或事业单位">国企或事业单位</option>
+                            <option value="公务员">公务员</option>
+                            <option value="私企">私企</option>
+                            <option value="中小学教师">中小学教师</option>
+                            <option value="大学教师">大学教师</option>
+                            <option value="个体工商业">个体工商业</option>
+                            <option value="农民">农民</option>
+                            <option value="自由职业者">自由职业者</option>
+                            <option value="其他">其他</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+            </div>
+        </div>
+        <div class="row question">
+            <div class="col-md-6">
+                <legend>Q3.母亲职业</legend>
+                <form role="form">
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option value="-1">请选择</option>
+                            <option value="医生">医生</option>
+                            <option value="国企或事业单位">国企或事业单位</option>
+                            <option value="公务员">公务员</option>
+                            <option value="私企">私企</option>
+                            <option value="中小学教师">中小学教师</option>
+                            <option value="大学教师">大学教师</option>
+                            <option value="个体工商业">个体工商业</option>
+                            <option value="农民">农民</option>
+                            <option value="自由职业者">自由职业者</option>
+                            <option value="其他">其他</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+            </div>
+        </div>
+        <div class="row question">
+            <div class="col-md-6">
+                <legend>Q4.是否单亲</legend>
+                <div class="radio radio-info radio-inline">
+                    <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked="">
+                    <label for="inlineRadio1"> 是 </label>
+                </div>
+                <div class="radio radio-inline">
+                    <input type="radio" id="inlineRadio2" value="option2" name="radioInline">
+                    <label for="inlineRadio2"> 否 </label>
+                </div>
+            </div>
+            <div class="col-md-6">
+            </div>
+        </div>
+        <div class="row question">
+            <div class="col-md-6">
+                <legend>Q5.和家长沟通频率</legend>
+                <div class="radio radio-info radio-inline">
+                    <input type="radio" id="inlineRadio1" value="option2" name="radioInline" checked="">
+                    <label for="inlineRadio1"> 每天 </label>
+                </div>
+                <div class="radio radio-inline">
+                    <input type="radio" id="inlineRadio2" value="option2" name="radioInline">
+                    <label for="inlineRadio2"> 每星期 </label>
+                </div>
+                <div class="radio radio-inline">
+                    <input type="radio" id="inlineRadio2" value="option2" name="radioInline">
+                    <label for="inlineRadio2"> 每个月 </label>
+                </div>
+            </div>
+            <div class="col-md-6">
+            </div>
+        </div>
+        <div class="row question">
+            <div class="col-md-6">
+                <legend>Q6.是否有兄弟姐妹</legend>
+                <div class="radio radio-info radio-inline">
+                    <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked="">
+                    <label for="inlineRadio1"> 是 </label>
+                </div>
+                <div class="radio radio-inline">
+                    <input type="radio" id="inlineRadio2" value="option2" name="radioInline">
+                    <label for="inlineRadio2"> 否 </label>
+                </div>
+            </div>
+            <div class="col-md-6">
+            </div>
+        </div>
+         <p class="fieldset">
+          <input class="submit" type="submit" value="提交">
+         </p>
     </div>
+    <footer>北京邮电大学2015级计算机学院</footer>
 </body>
 
 </html>

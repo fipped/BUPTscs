@@ -96,8 +96,7 @@
 @media(max-width: 768px) {
   .navbar-vertical-left {
     position: fixed;
-    top: auto;
-    bottom: 0;
+    top: 0;
     height: auto;
     width: 100%;
   }

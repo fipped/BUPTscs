@@ -5,10 +5,17 @@
 -------------------------------- */
 
 body {
+    min-width: 320px;
     background: #f9f7f3;
     color: #404d5b;
     font-weight: 500;
     font-family: "Segoe UI", Arial, "Microsoft YaHei", "Droid Sans", "FontAwesome", "PT Sans", sans-serif;
+    font-size: 16px;
+}
+
+a,
+a:hover {
+    text-decoration: none;
 }
 
 input,
@@ -16,6 +23,95 @@ textarea {
     font-family: "Segoe UI", Arial, "Microsoft YaHei", "Droid Sans", "FontAwesome", "PT Sans", sans-serif;
     font-size: 16px;
     font-size: 1rem;
+}
+textarea.form-control 
+{
+    font-size: 16px;
+}
+input[type=submit] {
+    padding: 16px 0;
+    cursor: pointer;
+    background: #2f889a;
+    color: #FFF;
+    font-weight: bold;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+input[type=submit]:hover {
+    background: #3599ae;
+    outline: none;
+}
+
+input[type=submit]:focus {
+    background: #257E90;
+    outline: none;
+}
+
+input {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    border-radius: 0.25em;
+}
+
+input.full-width {
+    width: 100%;
+}
+
+.fieldset {
+    margin: 2em 0;
+}
+
+.fieldset:first-child {
+    margin-top: 0;
+}
+
+.fieldset:last-child {
+    margin-bottom: 0;
+}
+
+.submit {
+    width: 160px;
+}
+
+
+/* -------------------------------- 
+
+容器
+
+-------------------------------- */
+
+.container {
+    padding: 80px;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+@media (max-width:500px) {
+    .container {
+        padding: 20px;
+    }
+
+}
+
+.article h1 {
+    padding-bottom: 30px;
+}
+
+.article {
+    padding-bottom: 30px;
+}
+
+.article li {
+    padding: 15px;
 }
 
 
@@ -28,7 +124,7 @@ textarea {
 @media (max-width:900px) {
     .header .title {
         font-size: 30px;
-        padding: 40px 0;
+        padding: 70px 0;
     }
     .title img {
         width: 50px;
@@ -58,24 +154,30 @@ textarea {
     text-align: center;
     font-size: 15px;
 }
+
+
 /* -------------------------------- 
 
 问卷
 
 -------------------------------- */
+
 .question {
     padding-top: 50px;
 }
+
+
 /* -------------------------------- 
 
 底部
 
 -------------------------------- */
-footer{
+
+footer {
     bottom: 0;
-	padding-top:50px;
-	padding-bottom: 60px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }

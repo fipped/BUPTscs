@@ -3,7 +3,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>登录-北京邮电大学计算机学院</title>
+<title>请假销假-北京邮电大学计算机学院</title>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <!--CSS-->
 <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -11,23 +11,20 @@
 <link rel="stylesheet" href="css/bootstrap-vertical-menu.css">
 <link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css">
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/login.css">
 <!--JS-->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/modernizr.js"></script>
-<script src="js/login.js"></script>
 
 <body>
-    <div id="header" class="header">
+    <div class="header">
         <div class="title"><img src="image/home.png" alt="">BUPTscs</div>
         <div class="subtitle">信息采集管理平台</div>
-        <hr>
     </div>
     <nav class="navbar navbar-vertical-left">
         <ul class="nav navbar-nav">
             <li>
-                <a href="info.html">
+                <a href>
                     <i class="fa fa-fw fa-lg fa-pencil-square-o"></i>
                     <span>填写信息</span>
                 </a>
@@ -56,36 +53,21 @@
                     <span>纸飞机</span>
                 </a>
             </li>
+            <li>
+                <a href>
+                    <i class="fa fa-fw fa-lg  fa-sign-out"></i>
+                    <span>注销</span>
+                </a>
+            </li>
         </ul>
     </nav>
     <div class="container">
-        <div id="login">
-            <form class="login-form">
-                <span id="login-info" class="login-error-message">0.0 登录失败，重试一发吧！</span>
-                <p class="fieldset">
-                    <label class="username" for="username"><i class="fa fa-user fa-fw"></i></label>
-                    <input class="full-width has-padding has-border" id="username" type="username" placeholder="2015211457">
-                    <span id="erroru" class="error-message">学号不能为空！</span>
-                </p>
-                <p class="fieldset">
-                    <label class="password" for="password"><i class="fa fa-key fa-fw"></i></label>
-                    <input class="full-width has-padding has-border" id="password" type="password" placeholder="密码">
-                    <a href="#0" class="hide-password">显示</a>
-                    <span id="errorp" class="error-message">密码不能为空！</span>
-                </p>
-                <p class="fieldset">
-                    <div class="checkbox">
-                        <input type="checkbox" id="remember-me" checked>
-                        <label for="remember-me">记住我</label>
-                        <p id="forget" href="">忘记密码</p>
-                        <span id="forget-inf" class="inf">请联系导员</span>
-                    </div>
-                </p>
-
-                <p class="fieldset">
-                    <input class="full-width" type="submit" value="登录">
-                </p>
-            </form>
+        <div class="article">
+            <h1>请假</h1>
+            <textarea class="form-control" rows="3">因聚会出校，预计今晚八点返校，请准假。</textarea>
+            <p class="fieldset">
+                <input class="submit pull-right" type="submit" value="提交">
+            </p>
         </div>
     </div>
     <footer>北京邮电大学2015级计算机学院</footer>
