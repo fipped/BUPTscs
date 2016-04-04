@@ -6,6 +6,7 @@
 <title>请假销假-北京邮电大学计算机学院</title>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <!--CSS-->
+<link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/font-awesome.min.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/bootstrap-vertical-menu.css">
@@ -15,6 +16,8 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/modernizr.js"></script>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
 
 <body>
     <div class="header">
@@ -54,7 +57,7 @@
                 </a>
             </li>
             <li>
-                <a href>
+                <a href="login.html">
                     <i class="fa fa-fw fa-lg  fa-sign-out"></i>
                     <span>注销</span>
                 </a>
@@ -65,6 +68,13 @@
         <div class="article">
             <h1>请假</h1>
             <textarea class="form-control" rows="3">因聚会出校，预计今晚八点返校，请准假。</textarea>
+            <p class="fieldset">
+                <input class="submit pull-right" type="submit" value="提交">
+            </p>
+        </div>
+                <div class="article">
+            <h1>销假</h1>
+            <textarea class="form-control" rows="3">已平安返回宿舍。</textarea>
             <p class="fieldset">
                 <input class="submit pull-right" type="submit" value="提交">
             </p>
