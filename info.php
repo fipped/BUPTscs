@@ -1,76 +1,23 @@
+<?php include('session.php');?>
 <!DOCTYPE html>
-<html lang="zh-CN">
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>信息采集-北京邮电大学计算机学院</title>
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-<!--CSS-->
-<link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="css/font-awesome.min.css">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/bootstrap-vertical-menu.css">
-<link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css">
-<link rel="stylesheet" href="css/style.css">
-<!--JS-->
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/modernizr.js"></script>
-      <script src="js/html5shiv.min.js"></script>
-      <script src="js/respond.min.js"></script>
+<html lang="zh-cn">
+
+<head>
+    <?php $title="问卷";include('head.php');?>
+    <link rel="stylesheet" href="css/info.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" media="screen">
+    <script src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script src="js/info.js"></script>
+</head>
+
 <body>
-    <div class="header">
-        <div class="title"><img src="image/home.png" alt="">BUPTscs</div>
-        <div class="subtitle">信息采集管理平台</div>
-    </div>
-    <nav class="navbar navbar-vertical-left">
-        <ul class="nav navbar-nav">
-            <li>
-                <a href>
-                    <i class="fa fa-fw fa-lg fa-pencil-square-o"></i>
-                    <span>填写信息</span>
-                </a>
-            </li>
-            <li>
-                <a href="askoff.html">
-                    <i class="fa fa-fw fa-lg fa-comments-o"></i>
-                    <span>请假销假</span>
-                </a>
-            </li>
-            <li>
-                <a href>
-                    <i class="fa fa-fw fa-lg fa-gears"></i>
-                    <span>管理信息</span>
-                </a>
-            </li>
-            <li>
-                <a href>
-                    <i class="fa fa-fw fa-lg fa-heart"></i>
-                    <span>小贴士</span>
-                </a>
-            </li>
-            <li>
-                <a href>
-                    <i class="fa fa-fw fa-lg  fa-paper-plane"></i>
-                    <span>纸飞机</span>
-                </a>
-            </li>
-            <li>
-                <a href>
-                    <i class="fa fa-fw fa-lg  fa-sign-out"></i>
-                    <span>注销</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+    <?php include('nav.php');include('header.php');?>
     <div class="container">
         <h2>调查问卷-20160331</h2>
-        <div class="row question">
-            <div class="col-md-6">
+        <form role="form">
                 <legend>Q1.你的年级</legend>
-                <form role="form">
                     <div class="form-group">
-                        <select class="form-control">
+                        <select id="choose1" class="form-control">
                             <option value="-1">请选择</option>
                             <option value="2012级本科">2012级本科</option>
                             <option value="2013级本科">2013级本科</option>
@@ -82,13 +29,10 @@
                             <option value="博士">博士</option>
                         </select>
                     </div>
-                </form>
-            </div>
-            <div class="col-md-6">
-            </div>
-        </div>
-        <div class="row question">
-            <div class="col-md-6">
+               <p class="filed"><span id="error1" class="error-info">这一栏没选哦</span></p>
+            
+             </form>
+        
                 <legend>Q2.父亲职业</legend>
                 <form role="form">
                     <div class="form-group">
@@ -107,10 +51,7 @@
                         </select>
                     </div>
                 </form>
-            </div>
-            <div class="col-md-6">
-            </div>
-        </div>
+
         <div class="row question">
             <div class="col-md-6">
                 <legend>Q3.母亲职业</legend>
@@ -139,11 +80,11 @@
             <div class="col-md-6">
                 <legend>Q4.是否单亲</legend>
                 <div class="radio radio-info radio-inline">
-                    <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked="">
+                    <input type="radio" id="inlineRadio1" value="option1" name="radioInline1">
                     <label for="inlineRadio1"> 是 </label>
                 </div>
                 <div class="radio radio-inline">
-                    <input type="radio" id="inlineRadio2" value="option2" name="radioInline">
+                    <input type="radio" id="inlineRadio2" value="option2" name="radioInline1">
                     <label for="inlineRadio2"> 否 </label>
                 </div>
             </div>
@@ -154,15 +95,15 @@
             <div class="col-md-6">
                 <legend>Q5.和家长沟通频率</legend>
                 <div class="radio radio-info radio-inline">
-                    <input type="radio" id="inlineRadio1" value="option2" name="radioInline" checked="">
+                    <input type="radio" id="inlineRadio1" value="option2" name="radioInline2">
                     <label for="inlineRadio1"> 每天 </label>
                 </div>
                 <div class="radio radio-inline">
-                    <input type="radio" id="inlineRadio2" value="option2" name="radioInline">
+                    <input type="radio" id="inlineRadio2" value="option2" name="radioInline2">
                     <label for="inlineRadio2"> 每星期 </label>
                 </div>
                 <div class="radio radio-inline">
-                    <input type="radio" id="inlineRadio2" value="option2" name="radioInline">
+                    <input type="radio" id="inlineRadio2" value="option2" name="radioInline2">
                     <label for="inlineRadio2"> 每个月 </label>
                 </div>
             </div>
@@ -173,11 +114,11 @@
             <div class="col-md-6">
                 <legend>Q6.是否有兄弟姐妹</legend>
                 <div class="radio radio-info radio-inline">
-                    <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked="">
+                    <input type="radio" id="inlineRadio1" value="option1" name="radioInline3">
                     <label for="inlineRadio1"> 是 </label>
                 </div>
                 <div class="radio radio-inline">
-                    <input type="radio" id="inlineRadio2" value="option2" name="radioInline">
+                    <input type="radio" id="inlineRadio2" value="option2" name="radioInline3">
                     <label for="inlineRadio2"> 否 </label>
                 </div>
             </div>
@@ -185,10 +126,10 @@
             </div>
         </div>
          <p class="fieldset">
-          <input class="submit" type="submit" value="提交">
+          <input class="submit" type="button" id="submit" value="提交">
          </p>
     </div>
-    <footer>北京邮电大学2015级计算机学院</footer>
+    <?php include('footer.php');?>
 </body>
 
 </html>

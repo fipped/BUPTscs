@@ -1,5 +1,27 @@
+.askoff{
+    display:inline;
+    width:150px;
+}
+.askoff-form .fieldset {
+    position: relative;
+    margin: 1.4em 0;
+}
 
-form .error-info {
+.askoff-form .fieldset:first-child {
+    margin-top: 0;
+}
+
+.askoff-form .fieldset:last-child {
+    margin-bottom: 0;
+}
+
+.askoff-form input.has-error {
+    border: 1px solid #d76666;
+}
+.askoff-form textarea.has-error {
+    border: 1px solid #d76666;
+}
+.askoff-form .error-message {
     display: inline-block;
     position: absolute;
     left: -5px;
@@ -19,7 +41,7 @@ form .error-info {
     -moz-transition: opacity 0.2s 0, visibility 0 0.2s;
     transition: opacity 0.2s 0, visibility 0 0.2s;
 }
-form .error-info::after {
+.askoff-form .error-message::after {
     /* triangle */
     content: '';
     position: absolute;
@@ -31,7 +53,7 @@ form .error-info::after {
     border-right: 8px solid transparent;
     border-bottom: 8px solid rgba(215, 102, 102, 0.9);
 }
-form .error-info.is-visible {
+.askoff-form .error-message.is-visible {
     opacity: 1;
     visibility: visible;
     -webkit-transition: opacity 0.2s 0, visibility 0 0;

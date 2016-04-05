@@ -18,6 +18,12 @@ a:hover {
     text-decoration: none;
 }
 
+/* -------------------------------- 
+
+表单设置
+
+-------------------------------- */
+
 input,
 textarea {
     font-family: "Segoe UI", Arial, "Microsoft YaHei", "Droid Sans", "FontAwesome", "PT Sans", sans-serif;
@@ -28,7 +34,7 @@ textarea.form-control
 {
     font-size: 16px;
 }
-input[type=submit] {
+input[type=submit],input[type=button] {
     padding: 16px 0;
     cursor: pointer;
     background: #2f889a;
@@ -59,12 +65,9 @@ input {
     border-radius: 0.25em;
 }
 
-input.full-width {
-    width: 100%;
-}
-
 .fieldset {
-    margin: 2em 0;
+    position: relative;
+    margin: 1.4em 0;
 }
 
 .fieldset:first-child {
@@ -123,14 +126,17 @@ input.full-width {
 
 @media (max-width:900px) {
     .header .title {
-        font-size: 30px;
-        padding: 70px 0;
+        font-size: 70px;
+        padding: 70px 20px 0px 0px;
     }
     .title img {
         width: 50px;
     }
-}
 
+}
+    .header{
+        width: 100%;
+    }
 .title {
     padding: 40px 100px 0px;
     font-size: 100px;

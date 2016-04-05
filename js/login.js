@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
     var $form_login = $('#login');
-    //hide or show password
+    //显示或隐藏 password
     $('.hide-password').on('click', function() {
         var $this = $(this),
             $password_field = $this.prev('input');
@@ -11,9 +11,8 @@ jQuery(document).ready(function($) {
         $password_field.putCursorAtEnd();
     });
 
-    //REMOVE THIS - it's just to show error messages 
-
-    $form_login.find('input[type="submit"]').on('click', function(event) {
+    //错误提示
+    $form_login.find('#submit').on('click', function(event) {
         var ok = 1;
         if ($('#username').val() == '') {
             event.preventDefault();
@@ -33,18 +32,20 @@ jQuery(document).ready(function($) {
             $('#password').removeClass('has-error');
             $('#errorp').removeClass('is-visible');
         }
-        if (ok == 0) return;
+        if (!ok) return;
         $.ajax({
             type: 'post',
-            url: 'login.php',
+            url: '../reg.php',
             data: {
                 username: $('#username').val(),
                 password: $('#password').val()
             },
             dataType: 'json',
             success: function(json) {
-                if (json.msg)
-                    alert(json.msg);
+                if (json.msg) {
+                    document.getElementById("login-info").innerHTML = json.msg;
+                    $('#login-info').addClass('is-visible');
+                }
                 if (json.url) { window.location.href = json.url };
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {

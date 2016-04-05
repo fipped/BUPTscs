@@ -1,5 +1,20 @@
+.feedback-form .fieldset {
+    position: relative;
+    margin: 1.4em 0;
+}
 
-form .error-info {
+.feedback-form .fieldset:first-child {
+    margin-top: 0;
+}
+
+.feedback-form .fieldset:last-child {
+    margin-bottom: 0;
+}
+
+.feedback-form textarea.has-error {
+    border: 1px solid #d76666;
+}
+.feedback-form .error-message {
     display: inline-block;
     position: absolute;
     left: -5px;
@@ -19,7 +34,7 @@ form .error-info {
     -moz-transition: opacity 0.2s 0, visibility 0 0.2s;
     transition: opacity 0.2s 0, visibility 0 0.2s;
 }
-form .error-info::after {
+.feedback-form .error-message::after {
     /* triangle */
     content: '';
     position: absolute;
@@ -31,7 +46,7 @@ form .error-info::after {
     border-right: 8px solid transparent;
     border-bottom: 8px solid rgba(215, 102, 102, 0.9);
 }
-form .error-info.is-visible {
+.feedback-form .error-message.is-visible {
     opacity: 1;
     visibility: visible;
     -webkit-transition: opacity 0.2s 0, visibility 0 0;

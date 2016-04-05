@@ -1,9 +1,15 @@
+
+
+input.full-width {
+    width: 100%;
+}
+
 #login {
     width: 90%;
     max-width: 400px;
     margin: auto;
 }
-
+/*
 .login-form .fieldset {
     position: relative;
     margin: 1.4em 0;
@@ -16,7 +22,7 @@
 .login-form .fieldset:last-child {
     margin-bottom: 0;
 }
-
+*/
 .login-form label {
     font-size: 14px;
     font-size: 0.875rem;
@@ -153,8 +159,6 @@ label.password {
         padding: 16px 0;
     }
 }
-
-
 
 .login-form .checkbox {
     margin: 10px 10px;
