@@ -38,3 +38,6 @@
         </li>
     </ul>
 </nav>
+<div id="user-info">
+<?php echo '学号：'.$_SESSION['username']; ?>
+</div>
